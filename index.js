@@ -2,7 +2,7 @@ const TwitchBot = require('twitch-bot')
 
 var api = require('twitch-api-v5');
 
-api.clientID = '48ft52vl3ve9sugb0wxyt7qzjer2j4';
+api.clientID = '';
 api.debug = true;
 
 // api.users.usersByName({ users: ['starcat'] }, (err, res) => {
@@ -25,7 +25,7 @@ api.search.streams({query: 'starcat'}, (err, res) => {
  
 const Bot = new TwitchBot({
   username: 'fairfruitbot',
-  oauth: 'oauth:tlpf086ozbb1kbgud9c37p126vtkwn',
+  oauth: '',
   channels: ['fairfruit']
 })
  
