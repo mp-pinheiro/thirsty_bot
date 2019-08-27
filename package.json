@@ -1,0 +1,24 @@
+{
+  "name": "thirsty_bot",
+  "version": "1.0.0",
+  "description": "A very thirsty boi",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mp-pinheiro/thirsty_bot.git"
+  },
+  "author": "Matheus Preischadt Pinheiro",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/mp-pinheiro/thirsty_bot/issues"
+  },
+  "homepage": "https://github.com/mp-pinheiro/thirsty_bot#readme",
+  "dependencies": {
+    "tmi.js": "^1.4.5",
+    "twitch-api-v5": "^2.0.4",
+    "twitch-bot": "^1.3.5"
+  }
+}
