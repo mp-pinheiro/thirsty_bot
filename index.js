@@ -163,20 +163,20 @@ setInterval(function() {
         if(err) {
             console.log(err);
         } else {
-          if(res.streams.length > 0 && Math.random() >= 0.5) {
-            res.streams.forEach(stream => {
-              if(stream.channel.name === channel.toLowerCase()) {
-                var uptime = getUptime(stream.created_at);
-                var amount = getThirstyString(uptime);
-                var uptimeHuman = msToReadableTime(uptime);
-                
-                Bot.say(stream.channel.display_name + ", you doof 🤓! It's been " + uptimeHuman + " since your broadcast started 😮. By now, you should've consumed " + amount + " water 💧 to maintain optimal hydration 💪.");
+          res.streams.forEach(stream => {
+            if(stream.channel.name != channel.toLowerCase()) {
+                if(Math.random() >= 0.5) {
+                  var uptime = getUptime(stream.created_at);
+                  var amount = getThirstyString(uptime);
+                  var uptimeHuman = msToReadableTime(uptime);
+
+                  Bot.say(stream.channel.display_name + ", you doof 🤓! It's been " + uptimeHuman + " since your broadcast started 😮. By now, you should've consumed " + amount + " water 💧 to maintain optimal hydration 💪.");
+                } else {
+                  var fact = facts[Math.floor(Math.random()*facts.length)];
+                  Bot.say(fact);
+                }
               }
-            });
-          } else {
-            var fact = facts[Math.floor(Math.random()*facts.length)];
-            Bot.say(fact);
-          }
+          });
         }
       });
     });
