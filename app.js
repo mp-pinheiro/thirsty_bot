@@ -55,7 +55,7 @@ function getUptime(startTime) {
 
 const Bot = new TwitchBot({
   username: 'fairfruitbot',
-  oauth: 'oauth:***REMOVED***',
+  oauth: '***REMOVED***',
   channels: CHANNELS
 })
  
