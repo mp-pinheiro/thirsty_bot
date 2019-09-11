@@ -8,8 +8,11 @@ const WATER_INTAKE_MS_ML = 105 / 60 / 60 / 1000;
 const VOLUME_CUP_ML = 236;
 const OZ_TO_ML = 0.034
 
+// dotenv init
 const dotenv = require('dotenv');
 dotenv.config();
+
+// API Client settings
 api.clientID = process.env.CLIENT_ID;
 api.debug = false;
 
@@ -53,12 +56,14 @@ function getUptime(startTime) {
   return Math.abs((new Date()).getTime() - (new Date(startTime)).getTime());
 }
 
+// Twitch Bot API Settings
 const Bot = new TwitchBot({
   username: 'fairfruitbot',
-  oauth: 'oauth:tlpf086ozbb1kbgud9c37p126vtkwn',
+  oauth: process.env.OAUTH,
   channels: CHANNELS
 })
  
+// Twitch Bot API
 Bot.on('join', channel => {
   console.log(`Joined channel: ${channel}`)
 })
